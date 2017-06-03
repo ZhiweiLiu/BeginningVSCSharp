@@ -1,0 +1,5 @@
+E:\BegVCSharp\Chapter05\Ch05Ex04\bin\Debug\Ch05Ex04.exe.config
+E:\BegVCSharp\Chapter05\Ch05Ex04\bin\Debug\Ch05Ex04.exe
+E:\BegVCSharp\Chapter05\Ch05Ex04\bin\Debug\Ch05Ex04.pdb
+E:\BegVCSharp\Chapter05\Ch05Ex04\obj\Debug\Ch05Ex04.exe
+E:\BegVCSharp\Chapter05\Ch05Ex04\obj\Debug\Ch05Ex04.pdb
