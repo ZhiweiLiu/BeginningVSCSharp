@@ -11,17 +11,51 @@ namespace Ch10CardLib
 
         public Deck()
         {
-            throw new System.NotImplementedException();
+            cards = new Card[52];
+            for (int suitVal = 0; suitVal < 4; suitVal++)
+            {
+                for (int rankVal = 1; rankVal < 14; rankVal++)
+                {
+                    //确定第几张牌是啥牌
+                    cards[suitVal * 13 + rankVal - 1] = new Card((Suit)suitVal, (Rank)rankVal);
+                }
+            }
         }
 
         public Card GetCard(int cardNum)
         {
-            throw new System.NotImplementedException();
+            if (cardNum>=0 && cardNum<=51)
+            {
+                return cards[cardNum];
+            }
+            else
+            {
+                throw (new System.ArgumentOutOfRangeException("cardNum", cardNum, "Value must be 0 to 51."));
+            }
         }
 
         public void Shuffle()
         {
-            throw new System.NotImplementedException();
+            Card[] newDeck = new Card[52];
+            bool[] assigned = new bool[52];
+            Random sourceGen = new Random();
+
+            for (int i = 0; i < 52; i++)
+            {
+                int destCard = 0;
+                bool foundcard = false;
+                while (foundcard==false)
+                {
+                    destCard = sourceGen.Next(52);
+                    if (assigned[destCard]==false)
+                    {
+                         foundcard= true;
+                    }
+                    assigned[destCard] = true;
+                    newDeck[destCard] = cards[i];
+                }
+            }
+            newDeck.CopyTo(cards, 0);
         }
     }
 }
