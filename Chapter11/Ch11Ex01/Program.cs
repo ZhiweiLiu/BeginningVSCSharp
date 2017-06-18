@@ -21,7 +21,7 @@ namespace Ch11Ex01
             animalArray[1] = new Chicken("Ken");
             foreach (Animal myanimal in animalArray)
             {
-                Console.WriteLine("New {0} object added to Array collection, Name = {1},its {2}", myanimal.ToString(), myanimal.Name);
+                Console.WriteLine("New {0} object added to Array collection, Name = {1}", myanimal.ToString(), myanimal.Name);
             }
             Console.WriteLine("Array collection contains {0} objects.", animalArray.Length);
             //简单数组是强类型的，可以直接访问它们所包含的类的类型
